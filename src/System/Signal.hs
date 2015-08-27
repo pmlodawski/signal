@@ -2,8 +2,7 @@
 
 module System.Signal where
 
-import Foreign.C.Types (CInt)
-import GHC.Conc        (Signal)
+import Foreign.C.Types
 #ifdef mingw32_HOST_OS
 import Control.Exception.Base (assert)
 import Foreign
@@ -12,6 +11,8 @@ import           Control.Monad        (void)
 import qualified System.Posix.Signals as Posix
 #endif
 
+
+type Signal = CInt
 
 -- | SIGABRT - Abnormal termination
 sigABRT :: Signal
