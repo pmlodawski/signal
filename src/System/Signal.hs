@@ -22,19 +22,19 @@ sigABRT = 6
 sigFPE :: Signal
 sigFPE = 8
 
--- SIGILL - Illegal instruction
+-- | SIGILL - Illegal instruction
 sigILL :: Signal
 sigILL = 4
 
--- SIGINT - CTRL+C signal
+-- | SIGINT - CTRL+C signal
 sigINT :: Signal
 sigINT = 2
 
--- SIGSEGV - Illegal storage access
+-- | SIGSEGV - Illegal storage access
 sigSEGV :: Signal
 sigSEGV = 11
 
--- SIGTERM - Termination request
+-- | SIGTERM - Termination request
 sigTERM :: Signal
 sigTERM = 15
 
