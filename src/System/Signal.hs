@@ -42,10 +42,10 @@ type Handler = Signal -> IO ()
 
 installHandler :: Signal -> Handler -> IO ()
 #ifdef mingw32_HOST_OS
-foreign import ccall "wrapper"
+foreign import stdcall "wrapper"
     genHandler:: Handler -> IO (FunPtr Handler)
 
-foreign import ccall safe "signal.h signal"
+foreign import stdcall safe "signal.h signal"
     install:: Signal -> FunPtr Handler -> IO Signal
 
 installHandler signal handler = do
